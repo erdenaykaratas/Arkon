@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proje — ARKON</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&family=Manrope:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-screen-label="Proje Detayı">
+
+<div class="cursor"></div>
+<div class="grain"></div>
+
+<nav class="pnav">
+  <a class="pnav__back" href="index.html#index"><span class="arr">←</span> Dizin</a>
+  <div class="pnav__brand">ARK<span>O</span>N</div>
+  <div class="p-counter"></div>
+</nav>
+
+<!-- HERO -->
+<section class="p-hero" data-screen-label="Proje Girişi">
+  <div class="p-hero__media"><div class="bg" id="pHeroBg"></div></div>
+  <div class="p-hero__top">
+    <div class="l"><b id="pType">—</b><br><span id="pScope">—</span></div>
+    <div class="r" style="text-align:right"><b id="pLoc">—</b><br><span id="pStatus">—</span></div>
+  </div>
+  <div class="p-hero__title">
+    <span class="kicker" id="pKicker">—</span>
+    <h1 id="pTitle">—</h1>
+    <div class="p-hero__meta" id="pHeroMeta"></div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="p-over" data-screen-label="Genel Bakış">
+  <div class="p-over__label"><span class="num">i.</span>Genel bakış<br><span style="color:var(--bone)">Brief</span></div>
+  <div>
+    <div class="p-over__brief reveal" id="pBrief">—</div>
+    <div class="p-spec" id="pSpec"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="p-gal" id="pGal" data-screen-label="Galeri"></section>
+
+<!-- MATERIALS -->
+<section class="p-mat" data-screen-label="Malzemeler">
+  <div class="p-mat__label"><span class="num">ii.</span>Malzeme<br>paleti</div>
+  <div class="p-mat__list" id="pMat"></div>
+</section>
+
+<!-- NEXT -->
+<a class="p-next" id="pNext" data-screen-label="Sonraki Proje">
+  <div class="bg" id="pNextBg"></div>
+  <div class="p-next__inner">
+    <span class="lbl">Sonraki proje →</span>
+    <h2 id="pNextTitle">—</h2>
+    <span class="sub" id="pNextSub">—</span>
+  </div>
+</a>
+
+<footer class="foot">
+  <div class="foot__brand">ARK<span>O</span>N</div>
+  <div class="foot__links">
+    <a href="index.html#work">İşler</a>
+    <a href="index.html#index">Dizin</a>
+    <a href="index.html#contact">İletişim</a>
+  </div>
+  <div>© MMXXV · Arkon Atölye</div>
+</footer>
+
+<script src="projects.js"></script>
+<script src="project.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARKON — Mimarlık & İç Mekan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&family=Manrope:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-screen-label="Arkon Portföy">
+
+<!-- Cursor + grain -->
+<div class="cursor"></div>
+<div class="grain"></div>
+
+<!-- Loader -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__count"><span class="v">00</span><span class="pct">/ 100</span></div>
+  <div class="loader__meta">
+    <b>ARKON · ATÖLYE</b><br>
+    mimarlık &amp; iç mekan<br>
+    kuruluş 2008 — İstanbul / Milano<br><br>
+    seçili işler yükleniyor
+  </div>
+</div>
+
+<!-- Side rails -->
+<div class="rail rail--l">K 41°02′ <span class="dot"></span> D 28°58′</div>
+<div class="rail rail--r">Cilt <b style="color:var(--paper)">17</b> · MMXXV · Portföy</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav__brand">ARK<span>O</span>N</div>
+  <div class="nav__links">
+    <a href="#work">İşler</a>
+    <a href="#index">Dizin</a>
+    <a href="#atelier">Atölye</a>
+    <a href="#contact">İletişim</a>
+  </div>
+  <div class="nav__clock">İST · 00:00:00</div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" data-screen-label="Giriş">
+  <div class="hero__bg" style="background-image:url('img/01.jpg')"></div>
+  <div class="hero__inner">
+    <div class="hero__eyebrow">
+      <div class="l"><b>Bir mimarlık pratiği</b><br>taş, gölge ve sessizliğin kesiştiği yerde çalışıyor.</div>
+      <div class="r"><b>17 yıl</b><br>40 seçili iş<br>9 ülke</div>
+    </div>
+
+    <div class="hero__title">
+      <h1 aria-label="Arkon.">
+        <span class="ch">A</span><span class="ch">r</span><span class="ch">k</span><span class="ch italic">o</span><span class="ch">n</span><span class="ch italic">.</span>
+      </h1>
+      <div class="hero__sub">
+        <p>Tek bir inançla biçimlenmiş kırk konut, restorasyon ve atölyeden oluşan bir portföy — mimarlık, gürültünün bittiği yerde başlar.</p>
+        <div class="num">2008<small>Kuruluş · İstanbul</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <span>Kaydır</span>
+    <span class="bar"></span>
+  </div>
+</section>
+
+<!-- ============================ MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>
+      Taş. <em style="font-style:italic;color:var(--ember)">Gölge.</em>
+      <i class="sep"></i>
+      Dingin ışık.
+      <i class="sep"></i>
+      Kırk oda, tek bir kulak.
+      <i class="sep"></i>
+      <em style="font-style:italic;color:var(--ember)">Arkon</em> Atölye.
+      <i class="sep"></i>
+      Taş. <em style="font-style:italic;color:var(--ember)">Gölge.</em>
+      <i class="sep"></i>
+      Dingin ışık.
+      <i class="sep"></i>
+      Kırk oda, tek bir kulak.
+      <i class="sep"></i>
+      <em style="font-style:italic;color:var(--ember)">Arkon</em> Atölye.
+      <i class="sep"></i>
+    </span>
+  </div>
+</div>
+
+<!-- ============================ MANIFESTO ============================ -->
+<section class="manifesto" id="atelier" data-screen-label="Manifesto">
+  <div class="manifesto__grid">
+    <div class="manifesto__label">
+      <span class="num">i.</span>
+      Manifesto<br>
+      <span style="color:var(--bone)">Atölyeden bir not</span>
+    </div>
+    <div>
+      <div class="manifesto__body">
+        Başkalarının <em>savlar</em> kurduğu gibi biz odalar kurarız — yavaşça, taşla, bir kulağımız havada. Her proje bir duvar, bir pencere ve ışığın geldiği saat arasında uzun bir konuşmadır. Trendlerin peşinden koşmayız. Siyah meşe bir zeminde uzanan <em>öğleden sonra gölgesinin</em> o sessiz dikdörtgeninin peşinden koşarız.
+      </div>
+      <div class="manifesto__sign">
+        <span>— <b>Selim Arkon</b>, kurucu ortak</span>
+        <span>İstanbul · MMXXV</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FEATURED — Horizontal scroll ============================ -->
+<section class="featured" id="work" data-screen-label="Öne Çıkan İşler">
+  <div class="featured__head">
+    <h2 class="reveal">Öne çıkan <em>işler.</em></h2>
+    <div class="meta reveal">
+      <b>Bölüm 02</b><br>
+      Yedi proje — 2021—2025<br>
+      Gezdirmek için kaydır →
+    </div>
+  </div>
+  <div class="h-scroll">
+    <div class="h-scroll__sticky">
+      <div class="h-scroll__track">
+        <!-- injected -->
+      </div>
+      <div class="h-scroll__progress"><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PARALLAX STRIP ============================ -->
+<section class="strip" data-screen-label="Alıntı 1">
+  <div class="strip__bg" style="background-image:url('img/06.jpg')"></div>
+  <div class="strip__quote">
+    <p class="reveal">
+      Bir ev, mobilyasından ağır, havasından dingin olmalı.
+      <cite>— atölye notu, cilt xii</cite>
+    </p>
+  </div>
+</section>
+
+<!-- ============================ INDEX LIST ============================ -->
+<section class="index" id="index" data-screen-label="Proje Dizini">
+  <div class="index__head">
+    <h2 class="reveal">Tüm <em>işler.</em></h2>
+    <div class="cols">
+      <span>Proje</span>
+      <span>Konum</span>
+      <span>Tür · Yıl</span>
+    </div>
+  </div>
+  <div class="index__list"><!-- injected --></div>
+  <div class="idx-preview"></div>
+</section>
+
+<!-- ============================ PARALLAX STRIP 2 ============================ -->
+<section class="strip" data-screen-label="Alıntı 2">
+  <div class="strip__bg" style="background-image:url('img/03.jpg')"></div>
+  <div class="strip__quote">
+    <p class="reveal">
+      Odaları bir terzinin palto kestiği gibi tasarlarız — oturması için değil, dökülmesi için.
+      <cite>— S. Arkon</cite>
+    </p>
+  </div>
+</section>
+
+<!-- ============================ ATELIER NUMBERS ============================ -->
+<section class="atelier" data-screen-label="Atölye Sayıları">
+  <div class="atelier__cell reveal">
+    <div class="lbl">№ 01 · proje</div>
+    <div class="val"><span data-counter="40">0</span></div>
+    <div class="note">Dokuz ülkede tamamlanmış seçili konutlar, restorasyonlar ve atölyeler.</div>
+  </div>
+  <div class="atelier__cell reveal">
+    <div class="lbl">№ 02 · yıl</div>
+    <div class="val"><span data-counter="17">0</span></div>
+    <div class="note">Atölye, İstanbul Karaköy'de tek bir arka oda stüdyosunda kurulduğundan beri.</div>
+  </div>
+  <div class="atelier__cell reveal">
+    <div class="lbl">№ 03 · ortak</div>
+    <div class="val"><em>vi.</em></div>
+    <div class="note">Altı kişilik bir stüdyo — mimarlar, bir iç mekan ortağı ve kadrolu bir marangoz.</div>
+  </div>
+  <div class="atelier__cell reveal">
+    <div class="lbl">№ 04 · yayın</div>
+    <div class="val"><span data-counter="32">0</span></div>
+    <div class="note"><i>Wallpaper*</i>, <i>AD</i>, <i>Domus</i>, <i>Dezeen</i> ve <i>The World of Interiors</i>'da yer aldı.</div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="cta" id="contact" data-screen-label="İletişim">
+  <div class="cta__inner">
+    <h2 class="cta__title">
+      <span class="line"><span>Bir sohbet</span></span>
+      <span class="line"><span><em>başlatalım.</em></span></span>
+    </h2>
+    <div class="cta__right">
+      <div class="cta__field"><span>Atölye</span><b>Karaköy · İstanbul</b></div>
+      <div class="cta__field"><span>Ofis</span><b>Via Tortona · Milano</b></div>
+      <div class="cta__field"><span>E-posta</span><b>merhaba@arkon.com</b></div>
+      <div class="cta__field"><span>Telefon</span><b>+90 212 000 00 00</b></div>
+      <a href="mailto:merhaba@arkon.com" class="cta__btn">
+        <span class="dot"></span>
+        Bir proje başlatın
+        <span style="margin-left:6px">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="foot__brand">ARK<span>O</span>N</div>
+  <div class="foot__links">
+    <a href="#">Instagram</a>
+    <a href="#">Are.na</a>
+    <a href="#">Günlük</a>
+    <a href="#">Basın kiti</a>
+  </div>
+  <div>© MMXXV · tüm işlerin telif hakkı Arkon Atölye</div>
+</footer>
+
+<script src="projects.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
