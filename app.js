@@ -178,7 +178,7 @@
       const p = projects[idx];
       return `
         <a class="f-card" href="project.html?id=${idx}" data-link>
-          <div class="f-card__img" style="background-image:url('img/0${p.img}.jpg')"></div>
+          <div class="f-card__img" style="background-image:url('${window.getProjectImg(p)}')"></div>
           <div class="f-card__num">${String(i+1).padStart(2,'0')} / ${String(featured.length).padStart(2,'0')}</div>
           <div class="f-card__meta">
             <h3>${p.title}</h3>
@@ -196,7 +196,7 @@
     const list = $('.index__list');
     if (!list) return;
     list.innerHTML = window.PROJECTS.map((p, i) => `
-      <a class="idx-row" href="project.html?id=${i}" data-img="img/0${p.img}.jpg">
+      <a class="idx-row" href="project.html?id=${i}" data-img="${window.getProjectImg(p)}">
         <div class="idx-row__no">№ ${String(i+1).padStart(2,'0')}</div>
         <div class="idx-row__title">${p.title}</div>
         <div class="idx-row__loc">${p.loc}</div>

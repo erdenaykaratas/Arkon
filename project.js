@@ -36,7 +36,7 @@
   $('#pLoc').textContent = m.loc;
   $('#pStatus').textContent = m.status;
   $('#pKicker').textContent = `Proje ${String(id+1).padStart(2,'0')} · ${m.year}`;
-  $('#pHeroBg').style.backgroundImage = `url('img/0${m.img}.jpg')`;
+  $('#pHeroBg').style.backgroundImage = `url('${window.getProjectImg(m)}')`;
 
   // title with char spans (split into words to allow wrapping)
   const titleEl = $('#pTitle');
@@ -65,31 +65,53 @@
     ['Tamamlanma', m.year]
   ].map(([l,v]) => `<div class="cell"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
 
-  // ---------- gallery (5 images, editorial layout) ----------
+  // ---------- gallery ----------
   const g = m.gallery;
-  const cap = (n,label) => `<div class="g-cap"><b>Görsel ${String(n).padStart(2,'0')}</b><span>${label}</span></div>`;
+  const cap = (n, label) => `<div class="g-cap"><b>Görsel ${String(n).padStart(2,'0')}</b><span>${label}</span></div>`;
   const fig = (src, cls) => `<div class="g-fig ${cls}"><div class="img" style="background-image:url('${src}')"></div></div>`;
-  $('#pGal').innerHTML = `
+
+  function renderGallery(images, meta){
+    if (!meta.customGallery) {
+      return `
     <div>
       ${fig(g[0],'full')}
-      ${cap(1, m.title + ' · ana görünüm')}
+      ${cap(1, meta.title + ' · ana görünüm')}
     </div>
     <div class="g-row">
       <div>${fig(g[1],'')}${cap(2,'İç mekan etüdü')}</div>
-      <div>${fig(g[2],'')}${cap(3,'Detay · ' + m.materials[0].toLowerCase())}</div>
+      <div>${fig(g[2],'')}${cap(3,'Detay · ' + meta.materials[0].toLowerCase())}</div>
     </div>
     <div class="g-row offset">
-      <div>${fig(g[3],'')}${cap(4, m.loc)}</div>
+      <div>${fig(g[3],'')}${cap(4, meta.loc)}</div>
       <div class="g-note">
         <div class="lbl">Kesit üzerine</div>
-        <p>Işık, tek bir derin nişten girer ve planın boyunca ilerleyerek <em>${m.materials[1].toLowerCase()}</em> yüzeyini öğleden sonra geç saatlerde ısıtır.</p>
+        <p>Işık, tek bir derin nişten girer ve planın boyunca ilerleyerek <em>${meta.materials[1].toLowerCase()}</em> yüzeyini öğleden sonra geç saatlerde ısıtır.</p>
       </div>
     </div>
     <div>
       ${fig(g[4],'tall')}
       ${cap(5,'Dinlenen oda')}
-    </div>
-  `;
+    </div>`;
+    }
+
+    let html = `<div>${fig(images[0], 'full')}${cap(1, meta.title + ' · ana görünüm')}</div>`;
+    for (let i = 1; i < images.length; i += 2) {
+      const left = i;
+      const right = i + 1;
+      if (right < images.length) {
+        const offset = Math.floor(i / 2) % 2 === 1 ? ' offset' : '';
+        html += `<div class="g-row${offset}">
+          <div>${fig(images[left], '')}${cap(left + 1, meta.typ)}</div>
+          <div>${fig(images[right], '')}${cap(right + 1, meta.loc)}</div>
+        </div>`;
+      } else {
+        html += `<div>${fig(images[left], 'tall')}${cap(left + 1, meta.title)}</div>`;
+      }
+    }
+    return html;
+  }
+
+  $('#pGal').innerHTML = renderGallery(g, m);
 
   // ---------- materials ----------
   $('#pMat').innerHTML = m.materials.map((mat,i) =>
@@ -100,7 +122,7 @@
   const nextId = (id + 1) % total;
   const next = window.PROJECTS[nextId];
   $('#pNext').href = `project.html?id=${nextId}`;
-  $('#pNextBg').style.backgroundImage = `url('img/0${next.img}.jpg')`;
+  $('#pNextBg').style.backgroundImage = `url('${window.getProjectImg(next)}')`;
   $('#pNextTitle').textContent = next.title;
   $('#pNextSub').textContent = `${next.loc} · ${next.typ} · ${next.year}`;
 
