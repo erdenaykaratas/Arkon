@@ -2,6 +2,7 @@
 window.PROJECTS = [
   {
     title: "21 Vines", loc: "İstanbul · TR", year: "2025", typ: "Şarap Mağazası", img: 1,
+    materials: ["İsli meşe", "Patine pirinç", "Kireç sıva", "Demir kafes"],
     gallery: [
       "img/21vines/21vines1.jpg",
       "img/21vines/21vines2.jpg",
@@ -15,6 +16,7 @@ window.PROJECTS = [
   },
   {
     title: "Adelajda Fizyoterapi", loc: "Bodrum · TR", year: "2025", typ: "Sağlık Merkezi", img: 1,
+    materials: ["Mat mikro çimento", "Açık meşe", "Buzlu cam", "Fırçalanmış nikel"],
     gallery: [
       "img/Adelajda_Fizyoterapi/37.jpg",
       "img/Adelajda_Fizyoterapi/2.jpg",
@@ -41,6 +43,7 @@ window.PROJECTS = [
   },
   {
     title: "Adelajda Shop", loc: "Paris · FR", year: "2024", typ: "Konut", img: 2,
+    materials: ["Carrara mermeri", "Ceviz", "Kireç badana", "Mat pirinç"],
     gallery: [
       "img/Adelajda_Shop/1.jpg",
       "img/Adelajda_Shop/4.jpg",
@@ -60,6 +63,7 @@ window.PROJECTS = [
   },
   {
     title: "Armani Store", loc: "Londra · UK", year: "2024", typ: "Mağaza", img: 4,
+    materials: ["Siyah mermer", "Karartılmış çelik", "Dumanlı ayna", "Lake panel"],
     gallery: [
       "img/Armani_Store/Armani 2.jpg",
       "img/Armani_Store/Armani 3.jpg",
@@ -78,6 +82,7 @@ window.PROJECTS = [
   },
   {
     title: "Basement Office", loc: "Milano · IT", year: "2024", typ: "Ofis", img: 5,
+    materials: ["Cilalı beton", "İsli ceviz", "Akustik keçe", "Siyah çelik"],
     gallery: [
       "img/Basement_Office/2.jpg",
       "img/Basement_Office/6.jpg",
@@ -92,6 +97,7 @@ window.PROJECTS = [
   },
   {
     title: "Beauty_Salon", loc: "New York · US", year: "2024", typ: "Güzellik Salonu", img: 6,
+    materials: ["Pembe traverten", "Mat pirinç", "Tadelakt", "Dumanlı ayna"],
     gallery: [
       "img/Beauty_Salon/1.jpg",
       "img/Beauty_Salon/2.jpg",
@@ -107,6 +113,7 @@ window.PROJECTS = [
   },
   {
     title: "Botanic", loc: "Çeşme · TR", year: "2023", typ: "Kafe", img: 1,
+    materials: ["Yeşil mermer", "Yanık çam", "Rattan", "Yaşlanmış bronz"],
     gallery: [
       "img/Botanic/2.jpg",
       "img/Botanic/3.jpg",
@@ -124,6 +131,7 @@ window.PROJECTS = [
   },
   {
     title: "Business Center", loc: "Cenevre · CH", year: "2023", typ: "Ofis", img: 2,
+    materials: ["Gri traverten", "Tütsülenmiş meşe", "Mikro çimento", "Fırçalanmış çelik"],
     gallery: [
       "img/Business_Center/11.jpg",
       "img/Business_Center/22.jpg",
@@ -134,6 +142,7 @@ window.PROJECTS = [
   },
   {
     title: "Colina Verde Rezidans", loc: "Barselona · ES", year: "2023", typ: "Rezidans", img: 3,
+    materials: ["Kum tonu sıva", "Doğal meşe", "Traverten", "Mat pirinç"],
     gallery: [
       "img/Colina_Verde_Residence/18 (4).jpg",
       "img/Colina_Verde_Residence/20 (4).jpg",
@@ -145,6 +154,7 @@ window.PROJECTS = [
   },
   {
     title: "Diş Kliniği", loc: "Kyoto · JP", year: "2023", typ: "Diş Kliniği", img: 4,
+    materials: ["Beyaz Corian", "Açık huş", "Buzlu cam", "Mat krom"],
     gallery: [
       "img/dental clinic/1.jpg",
       "img/dental clinic/4.jpg",
@@ -166,6 +176,7 @@ window.PROJECTS = [
   },
   {
     title: "Dibra Bakery", loc: "Bodrum · TR", year: "2023", typ: "Fırın", img: 5,
+    materials: ["Terrakotta tuğla", "Meşe tezgah", "Pirinç", "Kireç sıva"],
     gallery: [
       "img/Dibra_Bakery/1.jpg",
       "img/Dibra_Bakery/2.jpg",
@@ -184,6 +195,7 @@ window.PROJECTS = [
   },
   {
     title: "Dubai", loc: "Lizbon · PT", year: "2023", typ: "Rezidans", img: 6,
+    materials: ["Bej oniks", "Tütsülü ceviz", "Şampanya pirinç", "Lake duvar"],
     gallery: [
       "img/Dubai/1.jpg",
       "img/Dubai/4.jpg",
@@ -204,6 +216,7 @@ window.PROJECTS = [
   },
   {
     title: "Exterior", loc: "İstanbul · TR", year: "2022", typ: "Dış Alan", img: 1,
+    materials: ["Andezit taş", "Termowood", "Cor-Ten çelik", "Çakıl"],
     gallery: [
       "img/Exterior/1 copy.jpg",
       "img/Exterior/2 copy.jpg",
@@ -222,6 +235,7 @@ window.PROJECTS = [
   },
   {
     title: "Fıer", loc: "Bordeaux · FR", year: "2022", typ: "Daire", img: 6,
+    materials: ["Kireç sıva", "Açık meşe", "Mat pirinç", "Keten tekstil"],
     gallery: [
       "img/Fıer/1.jpg",
       "img/Fıer/2.jpg",
@@ -233,6 +247,7 @@ window.PROJECTS = [
   },
   {
     title: "Gjrokaster Bar", loc: "Paris · FR", year: "2022", typ: "Bar", img: 2,
+    materials: ["Yeşil mermer", "Karartılmış pirinç", "İsli meşe", "Dumanlı ayna"],
     gallery: [
       "img/Gjrokaster_Bar/3.jpg",
       "img/Gjrokaster_Bar/8.jpg",
@@ -240,6 +255,7 @@ window.PROJECTS = [
   },
   {
     title: "Hotel", loc: "Amalfi · IT", year: "2022", typ: "Hotel", img: 3,
+    materials: ["Traverten", "Ceviz kaplama", "Kadife", "Antik pirinç"],
     gallery: [
       "img/Hotel/3c.jpg",
       "img/Hotel/4b.jpg",
@@ -254,6 +270,7 @@ window.PROJECTS = [
   },
   {
     title: "Hyatt", loc: "Hamburg · DE", year: "2022", typ: "Hotel", img: 4,
+    materials: ["Krem mermer", "Kara meşe", "Bronz", "Dokuma kumaş"],
     gallery: [
       "img/Hyatt/1.jpg",
       "img/Hyatt/2.jpg",
@@ -277,6 +294,7 @@ window.PROJECTS = [
   },
   {
     title: "Endüstriyel Ofis", loc: "İzmir · TR", year: "2022", typ: "Ofis", img: 5,
+    materials: ["Ham beton", "Siyah çelik", "Geri dönüştürülmüş ahşap", "Cam tuğla"],
     gallery: [
       "img/Industrial_Office/1 (1).jpg",
       "img/Industrial_Office/1.jpg",
@@ -295,6 +313,7 @@ window.PROJECTS = [
   },
   {
     title: "İtalyan Restoran", loc: "Oslo · NO", year: "2022", typ: "Restoran", img: 1,
+    materials: ["Kırmızı mermer", "Patine pirinç", "İsli meşe", "Kadife"],
     gallery: [
       "img/Italyan_Restorant/1 (3).jpg",
       "img/Italyan_Restorant/2 (1).jpg",
@@ -310,6 +329,7 @@ window.PROJECTS = [
   },
   {
     title: "Villa Bahçesi", loc: "Roma · IT", year: "2022", typ: "Bahçe", img: 6,
+    materials: ["Doğal taş", "Termowood", "Çelik pergola", "Çakıl döşeme"],
     gallery: [
       "img/Izmir_Villa_Garden/2.jpg",
       "img/Izmir_Villa_Garden/3.jpg",
@@ -324,6 +344,7 @@ window.PROJECTS = [
   },
   {
     title: "Kimela", loc: "İstanbul · TR", year: "2021", typ: "Restorasyon", img: 2,
+    materials: ["Özgün taş duvar", "Yaşlı meşe", "Kireç harç", "Patine demir"],
     gallery: [
       "img/Kimela/1A.jpg",
       "img/Kimela/3.jpg",
@@ -335,6 +356,7 @@ window.PROJECTS = [
   },
   {
     title: "Ksamil", loc: "Londra · UK", year: "2021", typ: "Şehir Evi", img: 3,
+    materials: ["Beyaz badana", "Açık meşe", "Traverten", "Mat pirinç"],
     gallery: [
       "img/Ksamil/1.jpg",
       "img/Ksamil/2.jpg",
@@ -348,6 +370,7 @@ window.PROJECTS = [
   },
   {
     title: "La Luna Klinik", loc: "Zermatt · CH", year: "2021", typ: "Klinik", img: 4,
+    materials: ["Carrara mermeri", "Siyah meşe", "Mat pirinç", "Kireç sıva"],
     gallery: [
       "img/La_Luna_Clinic/1.jpg",
       "img/La_Luna_Clinic/2.jpg",
@@ -375,6 +398,7 @@ window.PROJECTS = [
   },
   {
     title: "Office", loc: "Karaköy · TR", year: "2021", typ: "Loft", img: 5,
+    materials: ["Cilalı beton", "Kara çelik", "Tütsülü meşe", "Cam bölme"],
     gallery: [
       "img/OFFİCE/ChatGPT Image Jan 8, 2026, 11_26_11 PM.png",
       "img/OFFİCE/ChatGPT Image Jan 8, 2026, 11_26_43 PM.png",
@@ -383,6 +407,7 @@ window.PROJECTS = [
   },
   {
     title: "Perde Shop", loc: "New York · US", year: "2021", typ: "Konut", img: 6,
+    materials: ["Kireç sıva", "Ceviz", "Keten perde", "Mat pirinç"],
     gallery: [
       "img/Perde_Shop/Exterior/exterior 1.jpg",
       "img/Perde_Shop/Exterior/exterior 2.jpg",
@@ -418,6 +443,7 @@ window.PROJECTS = [
   },
   {
     title: "Private Apartment", loc: "Atina · GR", year: "2021", typ: "Villa", img: 1,
+    materials: ["Carrara mermeri", "Doğal meşe", "Şampanya pirinç", "Tadelakt"],
     gallery: [
       "img/Private_Apartment/3.jpg",
       "img/Private_Apartment/12.jpg",
@@ -429,6 +455,7 @@ window.PROJECTS = [
   },
   {
     title: "Proj1", loc: "Brüksel · BE", year: "2021", typ: "Stüdyo", img: 2,
+    materials: ["Mikro çimento", "Huş kontrplak", "Siyah çelik", "Akustik panel"],
     gallery: [
       "img/Proj1/1.jpg",
       "img/Proj1/3 copy.jpg",
@@ -439,6 +466,7 @@ window.PROJECTS = [
   },
   {
     title: "Proj2", loc: "İstanbul · TR", year: "2020", typ: "Konaklama", img: 3,
+    materials: ["Traverten", "Tütsülü meşe", "Bronz", "Yün tekstil"],
     gallery: [
       "img/proj2/Prova/2.jpg",
       "img/proj2/Prova/3.jpg",
@@ -453,6 +481,7 @@ window.PROJECTS = [
   },
   {
     title: "Prova2", loc: "Como · IT", year: "2020", typ: "Villa", img: 4,
+    materials: ["Bej traverten", "Ceviz", "Mat pirinç", "Kireç sıva"],
     gallery: [
       "img/Prova2/1.jpg",
       "img/Prova2/2.jpg",
@@ -471,6 +500,7 @@ window.PROJECTS = [
   },
   {
     title: "Rolling Hills", loc: "Kopenhag · DK", year: "2020", typ: "Daire", img: 5,
+    materials: ["Açık meşe", "Kireç badana", "Fırçalanmış nikel", "Keten"],
     gallery: [
       "img/Rolling_Hills/2_2 - Foto.jpg",
       "img/Rolling_Hills/2_7 - Foto.jpg",
@@ -480,6 +510,7 @@ window.PROJECTS = [
   },
   {
     title: "Stela_Apt", loc: "İstanbul · TR", year: "2020", typ: "Restorasyon", img: 6,
+    materials: ["Özgün tuğla", "Yaşlı meşe", "Kireç sıva", "Patine pirinç"],
     gallery: [
       "img/Stela_Apt/3.jpg",
       "img/Stela_Apt/4.jpg",
@@ -499,6 +530,7 @@ window.PROJECTS = [
   },
   {
     title: "Stone Villa", loc: "Floransa · IT", year: "2020", typ: "Konut", img: 1,
+    materials: ["Doğal taş", "İsli meşe", "Traverten", "Yaşlanmış bronz"],
     gallery: [
       "img/Stone_Villa/4.jpg",
       "img/Stone_Villa/DARK  R 2.jpg",
@@ -509,6 +541,7 @@ window.PROJECTS = [
   },
   {
     title: "Toka Spa Center", loc: "Berlin · DE", year: "2020", typ: "Stüdyo", img: 2,
+    materials: ["Tadelakt", "Tik ahşap", "Doğal taş", "Mat pirinç"],
     gallery: [
       "img/Toka_Spa_Center/1.jpg",
       "img/Toka_Spa_Center/3.jpg",
@@ -531,6 +564,7 @@ window.PROJECTS = [
   },
   {
     title: "Tulipan", loc: "Antalya · TR", year: "2019", typ: "Villa", img: 3,
+    materials: ["Krem mermer", "Doğal meşe", "Şampanya pirinç", "Kireç sıva"],
     gallery: [
       "img/Tulipan/2.jpg",
       "img/Tulipan/9.jpg",
@@ -618,7 +652,9 @@ window.getProjectMeta = function(idx){
   const area = 90 + ((idx * 47) % 760);
   const months = 9 + ((idx * 5) % 28);
   const team = 3 + (idx % 4);
-  const materials = _materialsPool[idx % _materialsPool.length];
+  const materials = (p.materials && p.materials.length)
+    ? p.materials
+    : _materialsPool[idx % _materialsPool.length];
   const scope = _scopePool[idx % _scopePool.length];
   const status = parseInt(p.year,10) >= 2024 ? "Yeni tamamlandı" : "Tamamlandı";
   return {

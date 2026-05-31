@@ -34,16 +34,16 @@
 
   // ---------- 2. Loader ----------
   const loader     = $('.loader');
-  const loaderNum  = $('.loader__count .v');
-  let loadProgress = 0;
+  const loaderDots = $('.loader__count .dots');
   const loadDuration = 1800;
   const loadStart = performance.now();
 
   function tickLoad(now){
     const t = clamp((now - loadStart) / loadDuration, 0, 1);
-    const eased = 1 - Math.pow(1 - t, 2.5);
-    loadProgress = Math.floor(eased * 100);
-    if (loaderNum) loaderNum.textContent = String(loadProgress).padStart(2,'0');
+    if (loaderDots){
+      const n = 1 + (Math.floor(now / 400) % 3);
+      loaderDots.textContent = '.'.repeat(n);
+    }
     if (t < 1) requestAnimationFrame(tickLoad);
     else finishLoad();
   }
@@ -155,15 +155,43 @@
 
   // ---------- 8. Horizontal sticky scroll (featured) ----------
   const hScroll = $('.h-scroll');
+  const hViewport = $('.h-scroll__sticky');
   const hTrack  = $('.h-scroll__track');
   const hProg   = $('.h-scroll__progress span');
-  let hMaxTranslate = 0;
-  function computeHScroll(){
-    if (!hTrack || !hScroll) return;
-    hMaxTranslate = Math.max(0, hTrack.scrollWidth - window.innerWidth);
-    // 1px of vertical scroll = 1px of horizontal pan. Add a little dwell at start & end.
-    const dwell = window.innerHeight * 0.25;
-    hScroll.style.height = (window.innerHeight + hMaxTranslate + dwell) + 'px';
+  function updateHProgress(){
+    if (!hViewport || !hProg) return;
+    const max = hViewport.scrollWidth - hViewport.clientWidth;
+    const prog = max > 0 ? hViewport.scrollLeft / max : 0;
+    hProg.style.width = (prog * 100) + '%';
+  }
+  function computeHScroll(){ updateHProgress(); }
+  if (hViewport){
+    hViewport.addEventListener('scroll', updateHProgress, {passive:true});
+    // Note: vertical mouse wheel is intentionally NOT hijacked — scrolling down
+    // keeps the page moving down. Horizontal panning is available via trackpad
+    // swipe, shift+wheel, and click-drag below.
+    // Click-drag to pan (desktop). Suppress the card link click only if the
+    // pointer actually moved, so a plain click still navigates.
+    let dragging=false, moved=false, startX=0, startLeft=0;
+    hViewport.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'touch') return; // let native touch scroll handle it
+      dragging=true; moved=false; startX=e.clientX; startLeft=hViewport.scrollLeft;
+    });
+    hViewport.addEventListener('pointermove', e => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 4){
+        moved=true;
+        if (!hViewport.hasPointerCapture(e.pointerId)) hViewport.setPointerCapture(e.pointerId);
+      }
+      hViewport.scrollLeft = startLeft - dx;
+    });
+    const endDrag = () => { dragging=false; };
+    hViewport.addEventListener('pointerup', endDrag);
+    hViewport.addEventListener('pointercancel', endDrag);
+    hViewport.addEventListener('click', e => {
+      if (moved){ e.preventDefault(); e.stopPropagation(); moved=false; }
+    }, true);
   }
   computeHScroll();
   window.addEventListener('resize', computeHScroll);
@@ -249,15 +277,6 @@
       const r = heroSection.getBoundingClientRect();
       const p = -r.top * 0.35;
       heroBg.style.transform = `scale(1.08) translate(0, ${p}px)`;
-    }
-    // Featured horizontal panning
-    if (hScroll){
-      const r = hScroll.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const total = hScroll.offsetHeight - vh;
-      const prog = clamp(-r.top / total, 0, 1);
-      hTrack.style.transform = `translateX(${-prog * hMaxTranslate}px)`;
-      if (hProg) hProg.style.width = (prog * 100) + '%';
     }
     // Manifesto word reveal
     const words = manifestoWords();
